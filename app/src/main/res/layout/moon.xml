@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/guideline5"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/moon" />
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <TextView
+        android:id="@+id/moonrise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Moonrise"
+        app:layout_constraintBottom_toTopOf="@+id/moonset"
+        app:layout_constraintStart_toStartOf="@+id/moonset"
+        app:layout_constraintTop_toBottomOf="@+id/guideline5" />
+
+    <TextView
+        android:id="@+id/moonset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Moonset"
+        app:layout_constraintBottom_toTopOf="@+id/nextFullMoon"
+        app:layout_constraintStart_toStartOf="@+id/nextFullMoon"
+        app:layout_constraintTop_toBottomOf="@+id/moonrise" />
+
+    <TextView
+        android:id="@+id/nextFullMoon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next full moon"
+        app:layout_constraintBottom_toTopOf="@+id/nextNewMoon"
+        app:layout_constraintStart_toStartOf="@+id/nextNewMoon"
+        app:layout_constraintTop_toBottomOf="@+id/moonset" />
+
+    <TextView
+        android:id="@+id/nextNewMoon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next new moon"
+        app:layout_constraintBottom_toTopOf="@+id/moonIllumination"
+        app:layout_constraintStart_toStartOf="@+id/moonIllumination"
+        app:layout_constraintTop_toBottomOf="@+id/nextFullMoon" />
+
+    <TextView
+        android:id="@+id/moonIllumination"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Moon illumination"
+        app:layout_constraintBottom_toTopOf="@+id/moonAge"
+        app:layout_constraintStart_toStartOf="@+id/moonAge"
+        app:layout_constraintTop_toBottomOf="@+id/nextNewMoon" />
+
+    <TextView
+        android:id="@+id/moonAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Moon age"
+        app:layout_constraintBottom_toTopOf="@+id/guideline8"
+        app:layout_constraintEnd_toStartOf="@+id/moonAgeValue"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moonIllumination" />
+
+    <TextView
+        android:id="@+id/moonriseTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/moonrise"
+        app:layout_constraintStart_toStartOf="@+id/moonsetTime" />
+
+    <TextView
+        android:id="@+id/moonsetTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/moonset"
+        app:layout_constraintStart_toStartOf="@+id/fullmoonDate" />
+
+    <TextView
+        android:id="@+id/fullmoonDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/nextFullMoon"
+        app:layout_constraintStart_toStartOf="@+id/newMoonDate" />
+
+    <TextView
+        android:id="@+id/newMoonDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/nextNewMoon"
+        app:layout_constraintStart_toStartOf="@+id/moonIlluminationValue" />
+
+    <TextView
+        android:id="@+id/moonIlluminationValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/moonIllumination"
+        app:layout_constraintStart_toStartOf="@+id/moonAgeValue" />
+
+    <TextView
+        android:id="@+id/moonAgeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/moonAge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/moonAge" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+</android.support.constraint.ConstraintLayout>
